@@ -1,0 +1,50 @@
+﻿.lightwindow_window
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 1100;
+  border: 1px solid #e5e5e5;
+  background: #f2f2f2;
+  padding: 10px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.lightwindow_mask
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background-color: #000;
+  opacity: 0.3;
+  display: none;
+}
+
+.lightwindow_content
+{
+}
+
+.lightwindow_title
+{
+  border-bottom: 1px dashed #c1cbda;
+  margin-bottom: 10px;
+}
+
+.lightwindow_title h1
+{
+  color: #f05110;
+  font-size: 1.4em;
+  font-weight: normal;
+}
+
+.lightwindow_content .Buttons
+{
+  float: right;
+}

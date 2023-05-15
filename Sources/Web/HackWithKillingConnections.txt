@@ -1,0 +1,98 @@
+﻿<add name="SimpleMySqlConnection" connectionString="server=localhost;User Id=root;password=1111;Persist Security Info=True;database=clubbybook_prod_test;Pooling=false;Connect Timeout=180;" />
+
+public static string SimpleConnectionString
+{
+    get
+    {
+        return WebConfigurationManager.ConnectionStrings["SimpleMySqlConnection"].ConnectionString;
+    }
+}
+
+static public System.Timers.Timer MyKillTimer = new System.Timers.Timer(); 
+
+//// Times to kill sleep connections
+//try
+//{
+//    MyKillTimer.Interval = 60000; // check sleeping connections every 60 seconds
+//    MyKillTimer.Elapsed += new System.Timers.ElapsedEventHandler(MyKillTimer_Event);
+//    MyKillTimer.AutoReset = true;
+//    MyKillTimer.Enabled = true;
+//}
+//catch
+//{
+//}
+
+//private void MyKillTimer_Event(object source, System.Timers.ElapsedEventArgs e)
+//{
+//    ContextManager.KillSleepingConnections(30);
+//}
+
+/// <summary>
+/// This function checks for any sleeping connections beyond a reasonable time and kills them.
+/// Since .NET appears to have a bug with how pooling MySQL connections are handled and leaves
+/// too many sleeping connections without closing them, we will kill them here.
+/// </summary>
+/// iMinSecondsToExpire - all connections sleeping more than this amount in seconds will be killed.
+/// <returns>integer - number of connections killed</returns>
+public static int KillSleepingConnections(int iMinSecondsToExpire)
+{
+    string strSQL = "show processlist";
+    System.Collections.ArrayList m_ProcessesToKill = new ArrayList();
+
+    using (MySqlConnection myConnection = new MySqlConnection(Settings.SimpleConnectionString))
+    {
+        using (MySqlCommand myCommand = new MySqlCommand(strSQL, myConnection))
+        {
+            MySqlDataReader myReader = null;
+
+            try
+            {
+                myConnection.Open();
+
+                // Get a list of processes to kill.
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    // Find all processes sleeping with a timeout value higher than our threshold.
+                    int iPID = Convert.ToInt32(myReader["Id"].ToString());
+                    string strState = myReader["Command"].ToString();
+                    int iTime = Convert.ToInt32(myReader["Time"].ToString());
+
+                    if (strState == "Sleep" && iTime >= iMinSecondsToExpire && iPID > 0)
+                    {
+                        // This connection is sitting around doing nothing. Kill it.
+                        m_ProcessesToKill.Add(iPID);
+                    }
+                }
+
+                myReader.Close();
+
+                foreach (int aPID in m_ProcessesToKill)
+                {
+                    strSQL = "kill " + aPID;
+                    myCommand.CommandText = strSQL;
+                    myCommand.ExecuteNonQuery();
+                }
+            }
+            catch
+            {
+            }
+            finally
+            {
+                if (myReader != null && !myReader.IsClosed)
+                {
+                    myReader.Close();
+                }
+
+                if (myConnection != null && myConnection.State == ConnectionState.Open)
+                {
+                    myConnection.Close();
+                }
+            }
+        }
+    }
+
+    Logger.Write(string.Format("The {0} sleeped connections killed.", m_ProcessesToKill.Count));
+
+    return m_ProcessesToKill.Count;
+}

@@ -1,0 +1,305 @@
+﻿/* --- Begin General Css Styles --- */
+
+*
+{
+  padding: 0px;
+  margin: 0px;
+  outline: 0;
+  border: 0;
+}
+
+html
+{
+  height: 100%;
+  overflow: scroll;
+}
+
+body
+{
+  background: #f2f2f2 url("/Images/Common/Background.png") repeat-x;
+  font-family: verdana, tahoma, lucida grande, times new roman, arial;
+  font-style: normal;
+  font-size: 0.8em;
+  color: #3b3b3b;
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+}
+
+h1
+{
+  color: #f05110;
+  font-size: 1.6em;
+  font-weight: normal;
+}
+
+h2
+{
+  color: #f05110;
+  font-size: 1.4em;
+  font-weight: normal;
+}
+
+h3
+{
+  color: #f05110;
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+p
+{
+  text-indent: 20px;
+  text-align: justify;
+  line-height: 1.4em;
+}
+
+p.LargeIndented
+{
+  text-indent: 40px;
+}
+
+a
+{
+  cursor: pointer;
+  color: #445a87;
+  text-decoration: none;
+}
+
+a:hover
+{
+  text-decoration: underline;
+}
+
+#container
+{
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  width: 100%;
+}
+
+#container div#innerContainer
+{
+  position: relative;
+  width: 802px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- End General Css Styles --- */
+
+/* --- Begin Common Elements Styles --- */
+
+a.SmallLink
+{
+  font-size: 0.8em;
+}
+
+a.ImageLink:hover
+{
+  text-decoration: none;
+}
+
+a.HiddenLink:hover
+{
+  text-decoration: none;
+}
+
+.LinkSubstitute
+{
+  color: #445a87;
+  text-decoration: none;
+}
+
+.Clear
+{
+  float: none;
+  clear: both;
+}
+
+.Left
+{
+  float: left;
+}
+
+.Right
+{
+  float: right;
+}
+
+.Hidden
+{
+  display: none;
+}
+
+.BottomLine
+{
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px dashed #C1CBDA;
+}
+
+.RequaredField
+{
+  color: #f05110;
+  font-family: verdana;
+  font-size: 0.9em;
+}
+
+.Error
+{
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  text-align: center;
+  background-color: #f05110;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-family: verdana;
+  font-size: 1.1em;
+  display: none;
+}
+
+.Error ul
+{
+  list-style: none;
+}
+
+.Error ul li
+{
+  color: #f0f0f0;
+  line-height: 1.4em;
+}
+
+/* --- TextBox --- */
+
+input.TextBox, textarea.TextBox
+{
+  font-family: verdana;
+  font-size: 1.1em;
+  border: 1px solid #CCCCCC;
+  width: 100%;
+  padding: 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+input.TextBox:hover, textarea.TextBox:hover
+{
+  background-color: #f8f8f8;
+}
+
+input.TextBox:focus, textarea.TextBox:focus
+{
+  background-color: #f8f8f8;
+}
+
+input.TextBox:disabled, textarea.TextBox:disabled
+{
+  background-color: #f0f0f0;
+}
+
+input.TextBox.Find, textarea.TextBox.Find
+{
+  background-image: url("/Images/Common/TextBoxFind.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 20px;
+}
+
+span.Prompt
+{
+  position: absolute;
+  top: 3px;
+  left: 25px;
+  color: #c0c0c0;
+  font-size: 1.2em;
+}
+
+/* --- Button --- */
+
+input.Button, a.Button
+{
+  background: #f04f10;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f37340), to(#f04f10));
+  background: -moz-linear-gradient(top, #f37340, #f04f10);
+  padding: 5.5px 11px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
+  color: #f8f8f8;
+  font-size: 1.0em;
+  font-family: 'Lucida Grande' , Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input.Button:hover, a.Button:hover
+{
+  background: #ff4800;
+}
+
+input.Button:active, a.Button:active
+{
+  background: #ff4800;
+}
+
+/* -- ComboBox --- */
+
+select.DropDownList
+{
+  font-family: verdana;
+  font-size: 1.1em;
+  width: 100%;
+  border: 1px solid #CCCCCC;
+  padding: 3px;
+  background-color: #ffffff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+select.DropDownList:hover
+{
+  background-color: #f8f8f8;
+}
+
+select.DropDownList:disabled
+{
+  background-color: #f0f0f0;
+}
+
+/* -- CheckBox --- */
+
+.CheckBox
+{
+  margin: 3px 0px;
+  display: block;
+  position: relative;
+  height: 16px;
+}
+
+.CheckBox input
+{
+  position: absolute;
+  left: 0px;
+  top: 2px;
+}
+
+.CheckBox label
+{
+  position: absolute;
+  left: 19px;
+  top: 0px;
+}
+
+/* --- End Common Elements Styles --- */

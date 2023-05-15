@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{66FD0D64-E1EE-4DEE-825C-9BC1C2A603C7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClubbyBook.Web</RootNamespace>
+    <AssemblyName>Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\EditAccount.aspx" />
+    <Content Include="Account\Notifications.aspx" />
+    <Content Include="Common\Contacts.aspx" />
+    <Content Include="Common\Maintenance.aspx" />
+    <Content Include="Common\UserAgreement.aspx" />
+    <Content Include="Common\SiteMap.aspx" />
+    <Content Include="Common\ResetPassword.aspx" />
+    <Content Include="Controls\InfoMessageControl.ascx" />
+    <Content Include="Editor\PrePostValidation.aspx" />
+    <Content Include="Editor\EditorTools.aspx" />
+    <Content Include="Editor\ResolveDuplicateBook.aspx" />
+    <Content Include="Editor\EditNews.aspx" />
+    <Content Include="Editor\EditAuthor.aspx" />
+    <Content Include="Editor\EditBook.aspx" />
+    <Content Include="Account\EditProfile.aspx" />
+    <Content Include="Common\About.aspx" />
+    <Content Include="Common\Books.aspx" />
+    <Content Include="Common\Authors.aspx" />
+    <Content Include="Common\News.aspx" />
+    <Content Include="Common\ViewNews.aspx" />
+    <Content Include="Common\Users.aspx" />
+    <Content Include="Common\Default.aspx" />
+    <Content Include="Common\Error.aspx" />
+    <Content Include="Common\Login.aspx" />
+    <Content Include="Common\Logout.aspx" />
+    <Content Include="Common\Registration.aspx" />
+    <Content Include="Common\ViewAuthor.aspx" />
+    <Content Include="Common\ViewBook.aspx" />
+    <Content Include="Common\ViewProfile.aspx" />
+    <Content Include="Controls\ContentHeaderControl.ascx" />
+    <Content Include="Controls\EnumDropDownList.ascx" />
+    <Content Include="Controls\ImageUploaderControl.ascx" />
+    <Content Include="Controls\RatingControl.ascx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="HackWithKillingConnections.txt" />
+    <Content Include="robots.txt" />
+    <Content Include="Scripts\jquery-1.5.min.js" />
+    <Content Include="Scripts\jquery.backtotop.js" />
+    <Content Include="Scripts\engine.js" />
+    <Content Include="Scripts\common.js" />
+    <Content Include="Scripts\jquery.lighttooltip.js" />
+    <Content Include="Scripts\jquery.lightwindow.js" />
+    <Content Include="Scripts\jquery.ajaxfileupload.js" />
+    <Content Include="Scripts\jquery.ajaxhelper.js" />
+    <Content Include="Scripts\jquery.caroufredsel.min.js" />
+    <Content Include="Scripts\jquery.imgareaselect.min.js" />
+    <Content Include="Scripts\jquery.lightcarousel.js" />
+    <Content Include="Scripts\jquery.lightcascading.js" />
+    <Content Include="Scripts\jquery.lightvalidation.js" />
+    <Content Include="Scripts\jquery.lightlist.js" />
+    <Content Include="Scripts\jquery.raty.min.js" />
+    <Content Include="Scripts\jquery.tmpl.min.js" />
+    <Content Include="Scripts\jquery.tokeninput.js" />
+    <Content Include="Services\BooksService.asmx" />
+    <Content Include="Services\AuthorsService.asmx" />
+    <Content Include="Admin\Web.config" />
+    <Content Include="Account\Web.config" />
+    <Content Include="Editor\Web.config" />
+    <None Include="MailTemplates\AddBookSystemNotification.bcmt" />
+    <None Include="MailTemplates\ConversationNotification.bcmt" />
+    <None Include="MailTemplates\FeedbackNotification.bcmt" />
+    <None Include="MailTemplates\PasswordWasChanged.bcmt" />
+    <None Include="MailTemplates\Registration.bcmt" />
+    <None Include="MailTemplates\ResetPassword.bcmt" />
+    <Content Include="Services\GeneralService.asmx" />
+    <Content Include="Services\NewsService.asmx" />
+    <Content Include="Services\NotificationsService.asmx" />
+    <Content Include="Services\ImageUploaderService.asmx" />
+    <Content Include="Services\LocationService.asmx" />
+    <Content Include="Services\RatingService.asmx" />
+    <Content Include="Services\UsersService.asmx" />
+    <Content Include="Services\ValidateService.asmx" />
+    <Content Include="Styles\content.css" />
+    <Content Include="Styles\backtotop.css" />
+    <Content Include="Styles\lighttooltip.css" />
+    <Content Include="Styles\lightwindow.css" />
+    <Content Include="Styles\lightcarousel.css" />
+    <Content Include="Styles\footer.css" />
+    <Content Include="Styles\general.css" />
+    <Content Include="Styles\header.css" />
+    <Content Include="Styles\imgareaselect.css" />
+    <Content Include="Styles\lightlist.css" />
+    <Content Include="Styles\navigation.css" />
+    <Content Include="Styles\token-input.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Temp\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\EditAccount.aspx.cs">
+      <DependentUpon>EditAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\EditAccount.aspx.designer.cs">
+      <DependentUpon>EditAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Notifications.aspx.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Notifications.aspx.designer.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Contacts.aspx.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Contacts.aspx.designer.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Maintenance.aspx.cs">
+      <DependentUpon>Maintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Maintenance.aspx.designer.cs">
+      <DependentUpon>Maintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UserAgreement.aspx.cs">
+      <DependentUpon>UserAgreement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\UserAgreement.aspx.designer.cs">
+      <DependentUpon>UserAgreement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SiteMap.aspx.cs">
+      <DependentUpon>SiteMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\SiteMap.aspx.designer.cs">
+      <DependentUpon>SiteMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InfoMessageControl.ascx.cs">
+      <DependentUpon>InfoMessageControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\InfoMessageControl.ascx.designer.cs">
+      <DependentUpon>InfoMessageControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\PrePostValidation.aspx.cs">
+      <DependentUpon>PrePostValidation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Editor\PrePostValidation.aspx.designer.cs">
+      <DependentUpon>PrePostValidation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\EditorTools.aspx.cs">
+      <DependentUpon>EditorTools.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Editor\EditorTools.aspx.designer.cs">
+      <DependentUpon>EditorTools.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\ResolveDuplicateBook.aspx.cs">
+      <DependentUpon>ResolveDuplicateBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Editor\ResolveDuplicateBook.aspx.designer.cs">
+      <DependentUpon>ResolveDuplicateBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\EditNews.aspx.cs">
+      <DependentUpon>EditNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Editor\EditNews.aspx.designer.cs">
+      <DependentUpon>EditNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\EditAuthor.aspx.cs">
+      <DependentUpon>EditAuthor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Editor\EditAuthor.aspx.designer.cs">
+      <DependentUpon>EditAuthor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\EditBook.aspx.cs">
+      <DependentUpon>EditBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Editor\EditBook.aspx.designer.cs">
+      <DependentUpon>EditBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Books.aspx.cs">
+      <DependentUpon>Books.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Books.aspx.designer.cs">
+      <DependentUpon>Books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Authors.aspx.cs">
+      <DependentUpon>Authors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Authors.aspx.designer.cs">
+      <DependentUpon>Authors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ViewNews.aspx.cs">
+      <DependentUpon>ViewNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ViewNews.aspx.designer.cs">
+      <DependentUpon>ViewNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ViewAuthor.aspx.cs">
+      <DependentUpon>ViewAuthor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ViewAuthor.aspx.designer.cs">
+      <DependentUpon>ViewAuthor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ViewBook.aspx.cs">
+      <DependentUpon>ViewBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ViewBook.aspx.designer.cs">
+      <DependentUpon>ViewBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ViewProfile.aspx.cs">
+      <DependentUpon>ViewProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ViewProfile.aspx.designer.cs">
+      <DependentUpon>ViewProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ContentHeaderControl.ascx.cs">
+      <DependentUpon>ContentHeaderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ContentHeaderControl.ascx.designer.cs">
+      <DependentUpon>ContentHeaderControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EnumDropDownList.ascx.cs">
+      <DependentUpon>EnumDropDownList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EnumDropDownList.ascx.designer.cs">
+      <DependentUpon>EnumDropDownList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImageUploaderControl.ascx.cs">
+      <DependentUpon>ImageUploaderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ImageUploaderControl.ascx.designer.cs">
+      <DependentUpon>ImageUploaderControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RatingControl.ascx.cs">
+      <DependentUpon>RatingControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RatingControl.ascx.designer.cs">
+      <DependentUpon>RatingControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\NonWWWRedirectModule.cs" />
+    <Compile Include="Modules\UrlRewriter.cs" />
+    <Compile Include="Pages\EntityEditPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EntityListPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SimplePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EntityViewPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\BooksService.asmx.cs">
+      <DependentUpon>BooksService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\AuthorsService.asmx.cs">
+      <DependentUpon>AuthorsService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\GeneralService.asmx.cs">
+      <DependentUpon>GeneralService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\NewsService.asmx.cs">
+      <DependentUpon>NewsService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\NotificationsService.asmx.cs">
+      <DependentUpon>NotificationsService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\ImageUploaderService.asmx.cs">
+      <DependentUpon>ImageUploaderService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\LocationService.asmx.cs">
+      <DependentUpon>LocationService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\RatingService.asmx.cs">
+      <DependentUpon>RatingService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\UsersService.asmx.cs">
+      <DependentUpon>UsersService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\ValidateService.asmx.cs">
+      <DependentUpon>ValidateService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\Wrappers.cs" />
+    <Compile Include="SiteMap\ChangeFrequently.cs" />
+    <Compile Include="SiteMap\SiteMapGenerator.cs" />
+    <Compile Include="SiteMap\ClubbyBookSiteMapProvider.cs" />
+    <Compile Include="SiteMap\SiteMapHelper.cs" />
+    <Compile Include="Utilities\RedirectHelper.cs" />
+    <Compile Include="Utilities\WebContextHolder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Properties\" />
+    <Folder Include="Temp\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BackgroundActions\BackgroundActions.csproj">
+      <Project>{D759DAE7-3253-4079-81C1-AD4D3B261557}</Project>
+      <Name>BackgroundActions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{EAA18A12-7C8E-4313-9D79-F7642F72EE96}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{782C7602-CCEC-4D49-8C36-F7250F6FE6C8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Controllers\Controllers.csproj">
+      <Project>{29ADAD15-2D79-48F8-8719-6390B8183CB7}</Project>
+      <Name>Controllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomControls\CustomControls.csproj">
+      <Project>{286D2296-DC7D-4D4D-8830-23E1C06413D9}</Project>
+      <Name>CustomControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UI\UI.csproj">
+      <Project>{A9776473-442F-4F6C-98D8-A2179CA16BD7}</Project>
+      <Name>UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Deploy.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Local.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>14271</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

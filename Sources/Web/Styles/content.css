@@ -1,0 +1,872 @@
+﻿/* --- Begin Content Container --- */
+
+#content
+{
+  border: 1px solid #e5e5e5;
+  background: #ffffff;
+  padding: 10px 10px 10px 10px;
+  z-index: 1;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- End Content Container --- */
+
+/* --- Begin Content Common Stuff --- */
+
+.SpaceBetween
+{
+  display: block;
+  width: 100%;
+  height: 20px;
+}
+
+/* --- End Content Container --- */
+
+/* --- Begin Content Title Control --- */
+
+.ContentHeader
+{
+  border-bottom: 1px dashed #c1cbda;
+  margin-bottom: 5px;
+}
+
+.ContentHeader div.Title, div.SmallTitle
+{
+  float: left;
+  padding-left: 10px;
+  padding-bottom: 2px;
+}
+
+.ContentHeader div.SmallTitle h2
+{
+  padding-top: 3px;
+}
+
+.ContentHeader div.Actions
+{
+  float: right;
+  margin-top: 13px;
+  font-size: 0.8em;
+}
+
+.ContentHeader div.Actions ul
+{
+  list-style: none;
+  margin-bottom: 2px;
+}
+
+.ContentHeader div.Actions ul li
+{
+  display: inline;
+}
+
+.ContentHeader div.Actions ul li a
+{
+  padding-left: 10px;
+}
+
+/* --- End Content Title Control --- */
+
+/* --- Begin Content List --- */
+
+.ContentDataList ul
+{
+  list-style: none;
+}
+
+.ContentDataList ul li.DataListItem
+{
+  position: relative;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px dashed #C1CBDA;
+}
+
+.ContentDataList ul li.Highlight
+{
+  background-color: #edf1f5;
+}
+
+.ContentDataList ul li.DataListItem div.Image
+{
+  float: left;
+  border: 1px solid #c1cbda;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.ContentDataList ul li.DataListItem div.Image img
+{
+  width: 64px;
+  height: 100px;
+}
+
+.ContentDataList ul li.DataListItem div.Data
+{
+  float: left;
+  width: 704px; /* 802 - 2(border) - 20(margins) - 64(image) - 2(image border) - 10(image margin) = 704 */
+}
+
+.ContentDataList ul li.DataListItem div.OnlyData
+{
+  width: 780px; /* 802 - 2(border) - 20(margins)= 780 */
+}
+
+.ContentDataList ul li.DataListItem div.Data ul.List
+{
+  list-style: none;
+}
+
+.ContentDataList ul li.DataListItem div.Data ul.List li.Item
+{
+  margin-bottom: 3px;
+  margin-left: 10px;
+}
+
+.ContentDataList ul li.DataListItem div.Data ul.List li.Title
+{
+  width: 85%;
+  font-size: 1.1em;
+}
+
+.ContentDataList ul li.DataListItem div.Data ul.List li.Label
+{
+  font-size: 1.0em;
+}
+
+.ContentDataList ul li.DataListItem div.Data ul.List li.Description
+{
+  font-size: 0.9em;
+  line-height: 1.4em;
+}
+
+.ContentDataList ul li.DataListItem div.Actions
+{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: none;
+}
+
+.ContentDataList ul li.DataListItem div.Actions ul
+{
+  list-style-type: none;
+}
+
+.ContentDataList ul li.DataListItem div.Actions ul li
+{
+  display: inline;
+}
+
+.ContentDataList ul li.DataListItem div.Actions ul li img
+{
+  width: 25px;
+  height: 25px;
+}
+
+.ContentDataList ul li.DataListItem div.Markers
+{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  margin-bottom: 5px; /* see .ContentDataList ul li.DataListItem padding*/
+}
+
+.ContentDataList ul li.DataListItem div.Markers ul
+{
+  list-style-type: none;
+}
+
+.ContentDataList ul li.DataListItem div.Markers ul li
+{
+  display: inline;
+}
+
+.ContentDataList ul li.DataListItem div.Markers ul li img
+{
+  width: 25px;
+  height: 25px;
+}
+
+/* --- End Content List  --- */
+
+/* --- Begin View Rows --- */
+
+.ViewRows
+{
+}
+
+.ViewRows div.ViewLeftSide
+{
+  float: left;
+  margin-right: 10px;
+}
+
+.ViewRows div.ViewLeftSide div.ViewImage
+{
+  text-align: center;
+  border: 2px solid #c1cbda;
+}
+
+.ViewRows div.ViewLeftSide div.ViewImage img
+{
+  width: 192px;
+  height: 300px;
+}
+
+.ViewRows div.ViewLeftSide div.ViewRate
+{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+}
+
+.ViewRows div.ViewLeftSide div.ViewActions ul
+{
+  list-style-type: none;
+  text-align: center;
+}
+
+.ViewRows div.ViewLeftSide div.ViewActions ul li
+{
+}
+
+.ViewRows div.ViewLeftSide div.ViewActions ul li img
+{
+  width: 25px;
+  height: 25px;
+}
+
+.ViewRows div.ViewData
+{
+  float: left;
+  width: 574px; /* 800 - 20 - 192 - 4 - 10 = 574 */
+}
+
+.ViewRows div.OnlyData /*use full line*/
+{
+  width: 780px; /* 800 - 20 = 780 */
+}
+
+.ViewRows div.ViewData ul.ViewDataList
+{
+  list-style: none;
+}
+
+.ViewRows div.ViewData ul.ViewDataList li.ViewDataListItem
+{
+  margin-bottom: 5px;
+}
+
+.ViewRows div.ViewData ul.ViewDataList li.ViewDataListItem div.Label
+{
+  width: 180px;
+  float: left;
+  text-align: right;
+  margin-right: 10px;
+  font-size: 1.1em;
+}
+
+.ViewRows div.ViewData ul.ViewDataList li.ViewDataListItem div.Value
+{
+  width: 384px; /*.ViewRows.Data.Width - ViewRows.Data.Label*/
+  float: left;
+  font-size: 1.1em;
+  line-height: 1.4em;
+  text-align: justify;
+}
+
+.ViewRows div.ViewData ul.ViewDataList li.ViewDataListItem.Description p
+{
+  line-height: 1.4em;
+  font-size: 0.9em;
+  margin-top: 2px;
+}
+
+.ViewAddNewBook
+{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.ViewAddNewBook input[type="text"]
+{
+  width: 695px;
+}
+
+.ViewAddNewBook .Fields
+{
+  float: left;
+  margin-top: 3px;
+}
+
+.ViewAddNewBook .Actions
+{
+  float: right;
+}
+
+.ViewAddNewBook .Actions img
+{
+  width: 30px;
+  height: 30px;
+}
+
+.Biography p
+{
+  line-height: 1.5em;
+  font-size: 0.9em;
+}
+
+/* --- End View Rows --- */
+
+/* --- Begin Edit Rows --- */
+
+.EditRows
+{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.EditRows ul.EditList
+{
+  list-style: none;
+}
+
+.EditRows ul.EditList li.EditListItem
+{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.EditRows ul.EditList li.EditListItem div.Label
+{
+  width: 200px;
+  float: left;
+  text-align: right;
+  margin-right: 10px;
+  margin-top: 2px;
+  font-size: 1.1em;
+}
+
+.EditRows ul.EditList li.EditListItem div.Value
+{
+  float: left;
+  width: 570px; /* 800 - 20 - 210 = 570 */
+}
+
+.EditRows ul.EditList li.EditListItem div.Buttons
+{
+  margin-top: 7px;
+  margin-left: 210px;
+}
+
+.EditInformation p
+{
+  text-align: justify;
+  text-indent: 20px;
+}
+
+/* --- End Edit Rows --- */
+
+/* --- Begin Book Authors Control --- */
+
+.BookAuthorsList
+{
+}
+
+.BookAuthorsList ul
+{
+  list-style-type: none;
+}
+
+.BookAuthorsList ul li
+{
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+}
+
+/* --- End Book Authors Control --- */
+
+/* --- Start Book Genres Control --- */
+
+.BookGenresList
+{
+}
+
+.BookGenresList ul
+{
+  list-style-type: none;
+}
+
+.BookGenresList ul li
+{
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+}
+
+/* --- End Book Genres Control --- */
+
+/* --- Begin Image Uploader Control --- */
+
+.ImageUploader div.Info
+{
+  margin-bottom: 5px;
+}
+
+.ImageUploader div.UploadError
+{
+  display: none;
+  color: #f05110;
+  margin-bottom: 5px;
+}
+
+.ImageUploader div.UploadError p
+{
+  text-indent: 0px;
+}
+
+.ImageUploader div.Uploader
+{
+  margin-bottom: 10px;
+}
+
+.ImageUploader div.Uploader .FileUploader
+{
+  float: left;
+  margin-right: 20px;
+}
+
+.ImageUploader div.Uploader .UploaderLink
+{
+  float: left;
+  padding-top: 6px;
+}
+
+.ImageUploader div.Images div.OrigImage
+{
+  float: left;
+  border: 2px solid #c1cbda;
+  margin-right: 10px;
+}
+
+.ImageUploader div.Images div.Thumbnail
+{
+  border: 2px solid #c1cbda;
+  float: left;
+  width: 96px;
+  height: 150px;
+  overflow: hidden;
+}
+
+/* --- End Image Uploader Control --- */
+
+/* -- Begin Rating Control --- */
+
+.RatingControl ul
+{
+  list-style: none;
+}
+
+.RatingControl ul li.Control
+{
+}
+
+.RatingControl ul li.Text
+{
+  text-align: center;
+  font-size: 0.7em;
+}
+
+.RatingControl ul li.Control .Rating
+{
+}
+
+.RatingControl ul li.Control .Rating img
+{
+  height: 20px;
+  width: 20px;
+}
+
+/* --- End Rating Control --- */
+
+/* -- Begin Search Block Control --- */
+
+.SearchBlock
+{
+  border-bottom: 1px dashed #c1cbda;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+.SearchBlock div.Simple
+{
+  position: relative;
+  width: 754px; /* 780(100%) - 6(textbox padding) - 20(find icon padding)*/
+}
+
+.SearchBlock div.Simple div.Cancel
+{
+  position: absolute;
+  right: -20px;
+  top: 3px;
+}
+
+.SearchBlock div.Simple div.Cancel img
+{
+  width: 18px;
+  height: 18px;
+}
+
+.SearchBlock div.Advanced
+{
+  margin-top: 10px;
+  display: none;
+}
+
+.SearchBlock div.Advanced ul.FilterList
+{
+  list-style: none;
+}
+
+.SearchBlock div.Advanced ul.FilterList li.FilterItem
+{
+  margin-bottom: 5px;
+}
+
+.SearchBlock div.Advanced ul.FilterList li.FilterItem div.Label
+{
+  float: left;
+  width: 140px;
+  margin-top: 4px;
+  margin-left: 5px;
+}
+
+.SearchBlock div.Advanced ul.FilterList li.FilterItem div.Field
+{
+  float: left;
+  text-align: left;
+  width: 400px;
+}
+
+.SearchBlock div.Advanced ul.FilterList li.FilterItem div.Field input[type="text"]
+{
+  width: 400px;
+}
+
+.SearchBlock div.Advanced ul.FilterList li.FilterItem div.Field select
+{
+  width: 408px;
+}
+
+.SearchBlock div.Advanced ul.FilterList li.Button
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 140px;
+}
+
+.SearchParametersBlock
+{
+  border-bottom: 1px dashed #c1cbda;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+.SearchParametersBlock p
+{
+  text-indent: 0px;
+  font-size: 0.7em;
+  color: #808080;
+}
+
+.SearchBlock div.Advanced ul.FilterList li.FilterItem div.Field #lstOffer
+{
+  width: 200px;
+  float: left;
+}
+
+.SearchBlock div.Advanced ul.FilterList li.FilterItem div.Field #lstBookType
+{
+  width: 200px;
+  float: left;
+}
+
+/* --- End Search Block Control --- */
+
+/* -- Begin Send Message Content Control --- */
+
+.SendMessageContentMessageBlock
+{
+  margin-bottom: 10px;
+  margin-right: 8px;
+}
+
+/* --- End Send Message Content Control --- */
+
+/* -- Begin Remove Profile Content Control --- */
+
+.RemoveProfileContentMessageBlock
+{
+  margin-bottom: 10px;
+  margin-right: 8px;
+}
+
+/* --- End Remove Profile Content Control --- */
+
+/* -- Begin Feedback Content Control --- */
+
+.FeedbackContentMessageBlock
+{
+  margin-bottom: 10px;
+  margin-right: 8px;
+}
+
+/* --- End Feedback Content Control --- */
+
+/* -- Begin Add Unproven Book Content Control --- */
+
+.AddUserUnprovenBookContentBlock
+{
+  margin-right: 8px;
+}
+
+.AddUserUnprovenBookContentBlock ul
+{
+  list-style-type: none;
+}
+
+.AddUserUnprovenBookContentBlock ul li
+{
+  margin-bottom: 5px;
+}
+
+.AddUserUnprovenBookContentBlock ul li div.Label
+{
+  margin-top: 3px;
+  width: 100px;
+  float: left;
+}
+
+.AddUserUnprovenBookContentBlock ul li div.Value
+{
+  width: 500px;
+  float: left;
+}
+
+/* --- End Add Unproven Book Content Control --- */
+
+/* -- Begin Profile Books Filter Content Control --- */
+
+.ProfileBooksFilter
+{
+  padding: 5px 0px 8px 0px;
+  text-align: center;
+}
+
+.ProfileBooksFilter span
+{
+  padding: 0px 0px;
+  margin: 1px 3px;
+}
+
+.ProfileBooksFilter span.Separator
+{
+  padding: 0px 0px;
+  margin: 0px 0px;
+}
+
+.ProfileBooksFilter span.Current
+{
+  background: #f05110;
+  padding: 1px 3px;
+  margin: 0px 0px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.ProfileBooksFilter span.Current a
+{
+  color: #ffffff;
+}
+
+/* --- End Profile Books Filter Content Control --- */
+
+/* -- Begin Choose Users Offers Content Control --- */
+
+.ChooseUsersOffersBlock
+{
+}
+
+.ChooseUsersOffersBlock ul
+{
+  list-style-type: none;
+}
+
+.ChooseUsersOffersBlock ul li
+{
+  float: left;
+  padding: 5px 10px;
+}
+
+/* --- End Choose Users Offers Content Control --- */
+
+/* -- Begin Change User Book Comment Content Control --- */
+
+.ChangeUserBookCommentContentBlock
+{
+  margin-bottom: 10px;
+  margin-right: 8px;
+}
+
+/* --- End Change User Book Comment Content Control --- */
+
+/* -- Begin Update SiteMap Content Control --- */
+
+.UpdateSiteMapBlock
+{
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* --- End Update SiteMap Content Control --- */
+
+/* -- Begin InfoMessageControl Content Control --- */
+
+.InfoMessageControlContent
+{
+  border: 1px dashed #f05110;
+  background-color: #f2f2f2;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.InfoMessageControlContent p
+{
+  text-align: justify;
+  font-size: 0.7em;
+}
+
+/* --- End InfoMessageControl Content Control --- */
+
+/* -- Begin UserAgreement Content Control --- */
+
+.UserAgreement
+{
+  line-height: 1.4em;
+  text-align: justify;
+  font-size: 0.9em;
+}
+
+.UserAgreement h2
+{
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.UserAgreement h3
+{
+  text-indent: 20px;
+  text-align: left;
+  font-style: italic;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.UserAgreement ul
+{
+  padding-bottom: 5px;
+}
+
+.UserAgreement ul li
+{
+  margin-left: 40px;
+  list-style-type: circle;
+}
+
+/* --- End UserAgreement Content Control --- */
+
+/* -- Begin Comments Content Control --- */
+
+.Comments .NewComment textarea
+{
+  width: 680px;
+  max-width: 680px;
+  max-height: 300px;
+  min-height: 40px;
+  float: left;
+  margin-right: 10px;
+}
+
+.Comments .NewComment a
+{
+  float: left;
+}
+
+/* --- End Comments Content Control --- */
+
+/* -- Begin Simple List Content Control --- */
+
+ul.SimpleList
+{
+  list-style-type: circle;
+  margin-left: 20px;
+}
+
+ul.SimpleList li
+{
+}
+
+/* --- End Simple List Content Control --- */
+
+/* -- Begin Simple List Content Control --- */
+
+.PrePostValidationBlock
+{
+  padding: 10px;
+  text-align: center;
+}
+
+.PrePostValidationDoneBlock p
+{
+  text-align: left;
+  margin-top: 10px;
+}
+
+.PrePostValidationDoneBlock ul
+{
+  list-style-type: none;
+  text-align: center;
+}
+
+.PrePostValidationDoneBlock ul li
+{
+  margin: 3px 0px;
+}
+
+.PrePostValidationBlock .TextBox
+{
+  margin-bottom: 10px;
+}
+
+.PrePostValidationBlock .Button
+{
+  margin: 0px auto;
+  width: 150px;
+}
+
+/* --- End Simple List Content Control --- */

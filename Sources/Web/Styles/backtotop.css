@@ -1,0 +1,14 @@
+﻿.backtotop
+{
+  position: fixed;
+  left: 5;
+  top: 5;
+  display: none;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #000000;
+  z-index: 900;
+  font-weight: bold;
+}

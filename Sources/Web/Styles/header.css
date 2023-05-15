@@ -1,0 +1,27 @@
+﻿#header
+{
+  z-index: 2;
+}
+
+#header #logo
+{
+  position: absolute;
+  top: -73px;
+  left: 0px;
+}
+
+#header #intro
+{
+  font-size: 0.8em;
+  position: absolute;
+  top: -20px;
+  right: 0px;
+}
+
+#header #welcomeMessage
+{
+  font-size: 0.8em;
+  position: absolute;
+  top: -74px;
+  right: 0px;
+}

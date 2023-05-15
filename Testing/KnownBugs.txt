@@ -1,0 +1,376 @@
+--- Message at 6/11/2012 10:45:46 PM
+New request is authenticated.
+
+--- Message at 6/11/2012 10:45:46 PM
+New request is authenticated.
+
+--- Message at 6/11/2012 10:45:47 PM
+New request is authenticated.
+
+--- Message at 6/11/2012 10:45:47 PM
+New request is authenticated.
+
+--- Message at 6/11/2012 10:45:47 PM
+New request is authenticated.
+
+--- Exception at 6/11/2012 10:45:48 PM
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Util.StringUtil.memcpyimpl(Byte* src, Byte* dest, Int32 len)
+   at System.Web.Util.StringUtil.UnsafeStringCopy(String src, Int32 srcIndex, Char[] dest, Int32 destIndex, Int32 len)
+   at System.Web.HttpWriter.Write(String s)
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at ClubbyBook.Web.Utilities.RedirectHelper.RedirectDirectly(HttpResponse response, String url)
+
+--- Exception at 6/11/2012 10:45:48 PM
+Request information:
+User IP: 178.92.166.116
+Browser: Chrome 19.0
+IsAuthenticated: True
+Url: http://clubbybook.com/Editor/EditAuthor.aspx?id=70
+UrlReferrer: http://clubbybook.com/editauthor/devid-gibbins
+
+System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.ArgumentException: Value does not fall within the expected range.
+   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Web.Hosting.IIS7WorkerRequest.GetQueryStringRawBytes()
+   at System.Web.HttpRequest.get_QueryStringBytes()
+   at System.Web.HttpRequest.FillInQueryStringCollection()
+   at System.Web.HttpRequest.get_QueryString()
+   at System.Web.HttpRequest.FillInParamsCollection()
+   at System.Web.HttpRequest.GetParams()
+   at System.Web.HttpRequest.get_Params()
+   at ClubbyBook.Web.Utilities.RedirectHelper.ResolveUrl(RedirectDirection direction, Boolean includeReturnUrl, Object[] values)
+   at ASP.default_master.__RendermasterForm(HtmlTextWriter __w, Control parameterContainer) in c:\domains\clubbybook.com\httpdocs\Default.Master:line 99
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlForm.Render(HtmlTextWriter output)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   at ASP.default_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in c:\domains\clubbybook.com\httpdocs\Default.Master:line 61
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at ClubbyBook.Web.Pages.SimplePage.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.editor_editauthor_aspx.ProcessRequest(HttpContext context) in c:\windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\88f70323\6b74d4f9\App_Web_5nvskjzh.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+--- Message at 6/11/2012 10:45:51 PM
+New request is authenticated.
+
+--- Exception at 6/11/2012 10:45:51 PM
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at ClubbyBook.Web.Utilities.RedirectHelper.RedirectDirectly(HttpResponse response, String url)
+
+   
+   
+   --- Message at 6/11/2012 10:39:02 PM
+ClubbyBook has been started.
+
+--- Exception at 6/11/2012 10:39:05 PM
+Request information:
+User IP: 178.92.166.116
+Browser: Chrome 19.0
+IsAuthenticated: False
+Url: http://clubbybook.com/viewbook/atlantida-1
+
+System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at EFProviderWrapperToolkit.EntityConnectionWrapperUtils.CreateEntityConnectionWithWrappers(String entityConnectionString, String[] wrapperProviders)
+   at ClubbyBook.Controllers.ExtendedEntities..ctor(String connectionString)
+   at ClubbyBook.Controllers.EntitiesManager.CreateContext()
+   at ClubbyBook.Controllers.EntitiesManager.StartSession()
+   at ClubbyBook.Controllers.EntitiesManager.get_SessionContext()
+   at ClubbyBook.Controllers.BooksController.FindByUrlRewrite(String alias)
+   at ClubbyBook.Web.Modules.UrlRewriter.<.cctor>b__5(String[] parameters)
+   at ClubbyBook.Web.Modules.UrlRewriter.CustomRewriteUnit.Rewrite(String[] parameters)
+   at ClubbyBook.Web.Modules.UrlRewriter.Context_BeginRequest(Object sender, EventArgs e)
+
+
+
+
+
+
+
+--- Message at 6/12/2012 8:51:43 PM
+ClubbyBook has been started.
+
+--- Exception at 6/12/2012 8:51:43 PM
+Request information:
+User IP: 94.179.100.83
+Browser: Chrome 19.0
+IsAuthenticated: False
+Url: http://clubbybook.com/viewbook/zhiznj-vzajmi
+
+System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at EFProviderWrapperToolkit.EntityConnectionWrapperUtils.CreateEntityConnectionWithWrappers(String entityConnectionString, String[] wrapperProviders)
+   at ClubbyBook.Controllers.ExtendedEntities..ctor(String connectionString)
+   at ClubbyBook.Controllers.EntitiesManager.CreateContext()
+   at ClubbyBook.Controllers.EntitiesManager.StartSession()
+   at ClubbyBook.Controllers.EntitiesManager.get_SessionContext()
+   at ClubbyBook.Controllers.BooksController.FindByUrlRewrite(String alias)
+   at ClubbyBook.Web.Modules.UrlRewriter.<.cctor>b__5(String[] parameters)
+   at ClubbyBook.Web.Modules.UrlRewriter.CustomRewriteUnit.Rewrite(String[] parameters)
+   at ClubbyBook.Web.Modules.UrlRewriter.Context_BeginRequest(Object sender, EventArgs e)
+
+
+
+
+
+   --- Exception at 6/11/2012 9:29:38 PM
+Request information:
+User IP: 109.87.59.151
+Browser: Chrome 19.0
+IsAuthenticated: True
+Url: http://clubbybook.com/Common/ViewBook.aspx?id=33
+UrlReferrer: http://clubbybook.com/
+
+System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.ArgumentException: Value does not fall within the expected range.
+   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Web.Hosting.IIS7WorkerRequest.GetQueryStringRawBytes()
+   at System.Web.HttpRequest.get_QueryStringBytes()
+   at System.Web.HttpRequest.FillInQueryStringCollection()
+   at System.Web.HttpRequest.get_QueryString()
+   at System.Web.HttpRequest.FillInParamsCollection()
+   at System.Web.HttpRequest.GetParams()
+   at System.Web.HttpRequest.get_Params()
+   at ClubbyBook.Web.Utilities.RedirectHelper.ResolveUrl(RedirectDirection direction, Boolean includeReturnUrl, Object[] values)
+   at ASP.default_master.__RendermasterForm(HtmlTextWriter __w, Control parameterContainer) in c:\domains\clubbybook.com\httpdocs\Default.Master:line 99
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlForm.Render(HtmlTextWriter output)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   at ASP.default_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in c:\domains\clubbybook.com\httpdocs\Default.Master:line 61
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at ClubbyBook.Web.Pages.SimplePage.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.common_viewbook_aspx.ProcessRequest(HttpContext context) in c:\windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\88f70323\6b74d4f9\App_Web_nlit54vt.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+   
+   
+ 
+--- Message at 6/11/2012 10:01:12 PM
+An unexpected error has been detected. (Url: ~/logout/)
+
+--- Exception at 6/11/2012 10:01:12 PM
+System.ArgumentException: Value does not fall within the expected range.
+   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Web.Hosting.IIS7WorkerRequest.GetQueryStringRawBytes()
+   at System.Web.HttpRequest.get_QueryStringBytes()
+   at System.Web.HttpRequest.FillInQueryStringCollection()
+   at System.Web.HttpRequest.get_QueryString()
+   at System.Web.HttpRequest.FillInParamsCollection()
+   at System.Web.HttpRequest.GetParams()
+   at System.Web.HttpRequest.get_Params()
+   at ClubbyBook.Web.Utilities.RedirectHelper.ResolveUrl(RedirectDirection direction, Boolean includeReturnUrl, Object[] values)
+
+   
+   
+   --- Exception at 6/11/2012 10:01:57 PM
+Request information:
+User IP: 109.87.59.151
+Browser: Chrome 19.0
+IsAuthenticated: True
+Url: http://clubbybook.com/Common/Logout.aspx?ReturnUrl=/
+UrlReferrer: http://clubbybook.com/
+
+System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.ArgumentException: Value does not fall within the expected range.
+   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Web.Hosting.IIS7WorkerRequest.SetKnownResponseHeader(Int32 index, String value, Boolean replace)
+   at System.Web.HttpHeaderCollection.SetHeader(String name, String value, Boolean replace)
+   at System.Web.HttpHeaderCollection.Set(String name, String value)
+   at System.Web.HttpResponse.ClearHeaders()
+   at System.Web.Script.Services.RestHandler.WriteExceptionJsonString(HttpContext context, Exception ex, Int32 statusCode)
+   at System.Web.Handlers.ScriptModule.HttpResponse_Redirecting(Object sender, EventArgs e)
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at ClubbyBook.Web.Utilities.RedirectHelper.RedirectDirectly(HttpResponse response, String url)
+   at ClubbyBook.Web.Pages.SimplePage.GoToReturnUrl(RedirectDirection navigateToIfFailed, Object[] parameters)
+   at ClubbyBook.Web.Common.Logout.Page_Load(Object sender, EventArgs e)
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at ClubbyBook.Web.Pages.SimplePage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.common_logout_aspx.ProcessRequest(HttpContext context) in c:\windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\88f70323\6b74d4f9\App_Web_snnvqi4f.7.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+   
+    
+   
+   --- Message at 6/11/2012 10:01:58 PM
+An unexpected error has been detected. (Url: ~/logout/)
+
+--- Exception at 6/11/2012 10:01:58 PM
+System.ArgumentException: Value does not fall within the expected range.
+   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Web.Hosting.IIS7WorkerRequest.GetServerVariableInternal(String name)
+   at System.Web.Hosting.IIS7WorkerRequest.GetServerVariable(String name)
+   at System.Web.HttpRequest.FillInServerVariablesCollection()
+   at System.Web.HttpServerVarsCollection.Populate()
+   at System.Web.HttpServerVarsCollection.get_Count()
+   at System.Collections.Specialized.NameValueCollection.Add(NameValueCollection c)
+   at System.Web.HttpRequest.FillInParamsCollection()
+   at System.Web.HttpRequest.GetParams()
+   at System.Web.HttpRequest.get_Params()
+   at ClubbyBook.Web.Utilities.RedirectHelper.ResolveUrl(RedirectDirection direction, Boolean includeReturnUrl, Object[] values)
+
+
+
+--- Exception at 2/19/2012 8:57:08 AM
+Request information:
+User IP: 74.125.16.156
+Browser: Chrome 12.0
+IsAuthenticated: False
+Url: http://www.clubbybook.com/viewbook/po-etu-storonu-raya
+UrlReferrer: http://www.google.com/search
+
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at EFProviderWrapperToolkit.EntityConnectionWrapperUtils.CreateEntityConnectionWithWrappers(String entityConnectionString, String[] wrapperProviders)
+   at ClubbyBook.Controllers.ExtendedEntities..ctor(String connectionString)
+   at ClubbyBook.Controllers.EntitiesManager.CreateContext()
+   at ClubbyBook.Controllers.EntitiesManager.StartSession()
+   at ClubbyBook.Controllers.EntitiesManager.get_SessionContext()
+   at ClubbyBook.Controllers.BooksController.FindByUrlRewrite(String alias)
+   at ClubbyBook.Web.Modules.UrlRewriter.<.cctor>b__5(String[] parameters)
+   at ClubbyBook.Web.Modules.UrlRewriter.CustomRewriteUnit.Rewrite(String[] parameters)
+   at ClubbyBook.Web.Modules.UrlRewriter.Context_BeginRequest(Object sender, EventArgs e)
+
+--- Message at 2/19/2012 8:57:08 AM
+New request has been started: http://www.clubbybook.com/Common/Error.aspx?code=4 (74.125.16.156, 74.125.16.156, Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.51 (KHTML, like Gecko; Google Web Preview) Chrome/12.0.742 Safari/534.51) from http://www.google.com/search
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- Exception at 21.09.2012 22:17:47
+Request information:
+User IP: 94.179.226.126
+Browser: Chrome 21.0
+IsAuthenticated: False
+Url: http://clubbybook.com/viewbook/celj-absolyutnoe-liderstvo
+
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at EFProviderWrapperToolkit.EntityConnectionWrapperUtils.CreateEntityConnectionWithWrappers(String entityConnectionString, String[] wrapperProviders)
+   at ClubbyBook.Controllers.ExtendedEntities..ctor(String connectionString)
+   at ClubbyBook.Controllers.EntitiesManager.CreateContext()
+   at ClubbyBook.Controllers.EntitiesManager.StartSession()
+   at ClubbyBook.Controllers.EntitiesManager.get_SessionContext()
+   at ClubbyBook.Controllers.BooksController.FindByUrlRewrite(String alias)
+   at ClubbyBook.Web.Modules.UrlRewriter.<.cctor>b__5(String[] parameters)
+   at ClubbyBook.Web.Modules.UrlRewriter.CustomRewriteUnit.Rewrite(String[] parameters)
+   at ClubbyBook.Web.Modules.UrlRewriter.Context_BeginRequest(Object sender, EventArgs e)
+   
+   
+   
+   
+   
+   
+   --- Exception at 23.09.2012 22:47:37
+Request information:
+User IP: 79.176.218.23
+Browser: Chrome 11.0
+IsAuthenticated: False
+Url: http://clubbybook.com/Common/Default.aspx?-n+-d+allow_url_include=1+-d+auto_prepend_file=php://input
+
+System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (="<?php echo base64_de...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.common_default_aspx.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   
+   
+   
+   
+   
+   
+   --- Exception at 26.09.2012 22:29:08
+Request information:
+User IP: 94.179.233.90
+Browser: Chrome 21.0
+IsAuthenticated: False
+Url: http://clubbybook.com/viewbook/belie-nochi
+
+System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at EFProviderWrapperToolkit.EntityConnectionWrapperUtils.CreateEntityConnectionWithWrappers(String entityConnectionString, String[] wrapperProviders)
+   at ClubbyBook.Controllers.ExtendedEntities..ctor(String connectionString)
+   at ClubbyBook.Controllers.EntitiesManager.CreateContext()
+   at ClubbyBook.Controllers.EntitiesManager.StartSession()
+   at ClubbyBook.Controllers.EntitiesManager.get_SessionContext()
+   at ClubbyBook.Controllers.BooksController.FindByUrlRewrite(String alias)
+   at ClubbyBook.Web.Modules.UrlRewriter.<.cctor>b__5(String[] parameters)
+   at ClubbyBook.Web.Modules.UrlRewriter.CustomRewriteUnit.Rewrite(String[] parameters)
+   at ClubbyBook.Web.Modules.UrlRewriter.Context_BeginRequest(Object sender, EventArgs e)

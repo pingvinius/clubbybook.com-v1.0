@@ -1,0 +1,164 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="ClubbyBook.Web.DefaultMaster" %>
+
+<%@ Import Namespace="ClubbyBook.Controllers" %>
+<%@ Import Namespace="ClubbyBook.Web.Utilities" %>
+<%@ Import Namespace="ClubbyBook.UI" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <title>ClubbyBook.com - Первая в Украине социальная сеть любителей книг</title>
+  <meta name="google-site-verification" content="n7_haf2W5Z-39W7P-Ty1Lc01UyUwWBF5ggLmdOYdjPs" />
+  <meta name='yandex-verification' content='5876e5e36653253a' />
+  <script type="text/javascript" src="/Scripts/jquery-1.5.min.js"></script>
+  <script type="text/javascript" src="/Scripts/common.js"></script>
+  <script type="text/javascript" src="/Scripts/jquery.ajaxhelper.js"></script>
+  <script type="text/javascript" src="/Scripts/jquery.lightwindow.js"></script>
+  <script type="text/javascript" src="/Scripts/jquery.lighttooltip.js"></script>
+  <script type="text/javascript" src="/Scripts/engine.js"></script>
+  <link runat="server" rel="Icon" href="~/favicon.ico" type="image/x-icon" />
+  <link runat="server" rel="Stylesheet" href="~/Styles/general.css" type="text/css" />
+  <link runat="server" rel="Stylesheet" href="~/Styles/header.css" type="text/css" />
+  <link runat="server" rel="Stylesheet" href="~/Styles/navigation.css" type="text/css" />
+  <link runat="server" rel="Stylesheet" href="~/Styles/content.css" type="text/css" />
+  <link runat="server" rel="Stylesheet" href="~/Styles/footer.css" type="text/css" />
+  <link runat="server" rel="Stylesheet" href="~/Styles/lightwindow.css" type="text/css" />
+  <link runat="server" rel="Stylesheet" href="~/Styles/lighttooltip.css" type="text/css" />
+  <asp:ContentPlaceHolder ID="cphHead" runat="server">
+  </asp:ContentPlaceHolder>
+</head>
+<body>
+  <script language="javascript" type="text/javascript">
+
+    function leaveFeedback() {
+
+      var feedbackWindow = $(".FeedbackGeneralBlock").lightwindow({
+        title: "Обратная связь",
+        focusElementSelector: "tbFeedbackMessage"
+      });
+      $("#btnLeaveFeedback").bind("click", function () {
+
+        var userId = -1;
+        <% if (UserManagement.IsAuthenticated) { %>
+          userId = <%= UserManagement.CurrentUser.Id %>;
+        <% } %>
+
+        engine.utilities.leaveFeedback($("#tbFeedbackMessage").val(), userId);
+
+        feedbackWindow.close();
+      });
+    }
+  </script>
+  <% if (UserManagement.IsAuthenticated)
+     { %>
+  <script language="javascript" type="text/javascript">
+
+    $(document).ready(function () {
+
+      engine.notifications.initialize(<%= UserManagement.CurrentUser.Id %>);
+    });
+  </script>
+  <% } %>
+  <form id="masterForm" runat="server">
+  <div id="container">
+    <div id="innerContainer">
+      <div id="header">
+        <div id="logo">
+          <a href='<%= RedirectHelper.ResolveUrl(RedirectDirection.Home) %>' class="ImageLink">
+            <img src='<%= ResolveUrl("~/Images/Common/Logo.png") %>' alt='<%= string.Format("{0} - Главная", UIUtilities.SiteBrandName) %>'
+              title='<%= string.Format("{0} - Главная", UIUtilities.SiteBrandName) %>' />
+          </a>
+        </div>
+        <div id="intro">
+          Первая в Украине социальная сеть любителей книг!
+        </div>
+        <% if (UserManagement.IsAuthenticated)
+           { %>
+        <div id="welcomeMessage">
+          Добро пожаловать,
+          <%= UIUtilities.ValidateStringValue(UIUtilities.GetUserFullName(UserManagement.CurrentUser)) %>!
+        </div>
+        <% } %>
+      </div>
+      <div id="navigation">
+        <div id="general">
+          <ul>
+            <li><a href='<%= RedirectHelper.ResolveUrl(RedirectDirection.Home) %>'>На главную</a></li>
+            <li><a href='<%= RedirectHelper.ResolveUrl(RedirectDirection.BookList) %>'>Книги</a></li>
+            <li><a href='<%= RedirectHelper.ResolveUrl(RedirectDirection.AuthorList) %>'>Авторы</a></li>
+            <li><a href='<%= RedirectHelper.ResolveUrl(RedirectDirection.UserList) %>'>Читатели</a></li>
+            <li><a href='<%= RedirectHelper.ResolveUrl(RedirectDirection.NewsList) %>'>Новости</a></li>
+          </ul>
+        </div>
+        <div id="profile">
+          <% if (UserManagement.IsAuthenticated)
+             { %>
+          <ul>
+            <li><a id="lnkNotifications" href='<%= RedirectHelper.ResolveUrl(RedirectDirection.Notifications) %>'>
+              Уведомления</a></li>
+            <li><a href='<%= RedirectHelper.ResolveUrl(RedirectDirection.ViewProfile, UserManagement.CurrentProfile.UrlRewrite) %>'>
+              Профайл</a></li>
+            <li><a href='<%= RedirectHelper.ResolveUrl(RedirectDirection.Logout, true) %>'>Выход</a></li>
+          </ul>
+          <% }
+             else
+             { %>
+          <ul>
+            <li><a href='<%= RedirectHelper.ResolveUrl(RedirectDirection.Registration, true) %>'>
+              Регистрация</a></li>
+            <li><a href='<%= RedirectHelper.ResolveUrl(RedirectDirection.Login, true) %>'>Вход</a></li>
+          </ul>
+          <% } %>
+        </div>
+        <div class="Clear">
+        </div>
+      </div>
+      <div id="content">
+        <asp:ContentPlaceHolder ID="cphBody" runat="server">
+        </asp:ContentPlaceHolder>
+      </div>
+      <div id="footer">
+        <ul>
+          <li><a href='<%= RedirectHelper.ResolveUrl(RedirectDirection.About) %>'>О проекте</a></li>
+          <li><a href="javascript: void(0)" onclick="leaveFeedback(); return false;">Обратная
+            связь</a></li>
+          <li><a href='<%= RedirectHelper.ResolveUrl(RedirectDirection.UserAgreement) %>'>Пользовательское
+            соглашение</a></li>
+          <li><a href='<%= RedirectHelper.ResolveUrl(RedirectDirection.SiteMap) %>'>Карта сайта</a></li>
+          <% if (UserManagement.IsEditorAuthenticated || UserManagement.IsAdminAuthenticated)
+             { %>
+          <li><a href='<%= RedirectHelper.ResolveUrl(RedirectDirection.EditorTools) %>'>Инструменты</a></li>
+          <% } %>
+          <li><a href='<%= RedirectHelper.ResolveUrl(RedirectDirection.Contacts) %>'>Контакты</a></li>
+        </ul>
+        <div id="copyright">
+          ClubbyBook (с) 2011 - 2012</div>
+      </div>
+    </div>
+  </div>
+  </form>
+  <div class="FeedbackGeneralBlock Hidden">
+    <div class="FeedbackContentMessageBlock">
+      <textarea class="TextBox" id="tbFeedbackMessage" rows="4" cols="70"></textarea>
+    </div>
+    <div class="Buttons">
+      <input type="button" class="Button" id="btnLeaveFeedback" title="Отправить" value="Отправить" />
+      <input type="button" class="Button lightwindow_close" title="Отмена" value="Отмена" />
+    </div>
+  </div>
+  <% if (IncludeGoogleAnalitics)
+     { %>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26832119-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function ()
+    {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <% } %>
+</body>
+</html>

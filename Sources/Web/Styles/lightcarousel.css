@@ -1,0 +1,67 @@
+﻿.lightcarousel
+{
+  position: relative;
+  padding: 0px 38px 0px 38px;
+}
+
+.lightcarousel div.lc_empty
+{
+  text-align: center;
+  color: #808080;
+}
+
+.lightcarousel div.lc_error
+{
+  text-align: center;
+  color: #808080;
+}
+
+.lightcarousel ul.lc_ul
+{
+  list-style: none;
+}
+
+.lightcarousel ul.lc_ul li
+{
+  border: 1px solid #c1cbda;
+  display: block;
+  float: left;
+  margin: 6px 3px 6px 3px;
+}
+
+.lightcarousel .lc_nav a
+{
+  position: absolute;
+  width: 32px;
+  height: 125px;
+  display: block;
+  top: 5%;
+  z-index: 5;
+}
+
+.lightcarousel .lc_nav a.lc_prev
+{
+  left: 0px;
+  background: url("/Images/Common/lightcarousel/lc_prev.png") no-repeat;
+}
+
+.lightcarousel .lc_nav a.lc_next
+{
+  right: 0px;
+  background: url("/Images/Common/lightcarousel/lc_next.png") no-repeat;
+}
+
+.lightcarousel .lc_loading img
+{
+  display: block;
+  margin: 0px auto;
+  width: 28px;
+  height: 28px;
+  background: url("/Images/Common/Loading.gif") no-repeat;
+}
+
+.lightcarousel .clear
+{
+  float: none;
+  clear: both;
+}

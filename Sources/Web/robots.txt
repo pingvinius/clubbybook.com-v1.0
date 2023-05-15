@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: *users*
+Disallow: *editbook*
+Disallow: *editauthor*
+Disallow: *editnews*
+Disallow: *editprofile*
+Disallow: *viewprofile*
+Disallow: *login*
+Disallow: *registration*
+Disallow: *resetpassword*
+Disallow: *error*
+Disallow: *useragreement*
+Disallow: *Images*
+Disallow: *Services*
+Disallow: *Scripts*
+Host: clubbybook.com
+Sitemap: http://clubbybook.com/sitemap.xml
